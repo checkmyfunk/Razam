@@ -13,6 +13,14 @@
 		F597E9A61E2BCF7B009E38B7 /* Razam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F597E9A41E2BCF7B009E38B7 /* Razam.xcdatamodeld */; };
 		F597E9A81E2BCF7B009E38B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F597E9A71E2BCF7B009E38B7 /* Assets.xcassets */; };
 		F597E9AB1E2BCF7B009E38B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F597E9A91E2BCF7B009E38B7 /* LaunchScreen.storyboard */; };
+		F597E9B61E2BD0B1009E38B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F597E9B21E2BD0B1009E38B7 /* Bolts.framework */; };
+		F597E9B71E2BD0B1009E38B7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F597E9B31E2BD0B1009E38B7 /* FBSDKCoreKit.framework */; };
+		F597E9B81E2BD0B1009E38B7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F597E9B41E2BD0B1009E38B7 /* FBSDKLoginKit.framework */; };
+		F597E9B91E2BD0B1009E38B7 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F597E9B51E2BD0B1009E38B7 /* FBSDKShareKit.framework */; };
+		F597E9EC1E2C2049009E38B7 /* MeetingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9EB1E2C2049009E38B7 /* MeetingsListViewController.swift */; };
+		F597E9EE1E2C2490009E38B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9ED1E2C2490009E38B7 /* SettingsViewController.swift */; };
+		F597E9F01E2C2890009E38B7 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9EF1E2C2890009E38B7 /* Meeting.swift */; };
+		F597E9F21E2C5748009E38B7 /* CreateMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9F11E2C5748009E38B7 /* CreateMeetingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		F597E9A71E2BCF7B009E38B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F597E9AA1E2BCF7B009E38B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F597E9AC1E2BCF7B009E38B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F597E9B21E2BD0B1009E38B7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Razam/Bolts.framework; sourceTree = "<group>"; };
+		F597E9B31E2BD0B1009E38B7 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Razam/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		F597E9B41E2BD0B1009E38B7 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Razam/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		F597E9B51E2BD0B1009E38B7 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Razam/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		F597E9EB1E2C2049009E38B7 /* MeetingsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingsListViewController.swift; sourceTree = "<group>"; };
+		F597E9ED1E2C2490009E38B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F597E9EF1E2C2890009E38B7 /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		F597E9F11E2C5748009E38B7 /* CreateMeetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMeetingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F597E9B91E2BD0B1009E38B7 /* FBSDKShareKit.framework in Frameworks */,
+				F597E9B61E2BD0B1009E38B7 /* Bolts.framework in Frameworks */,
+				F597E9B71E2BD0B1009E38B7 /* FBSDKCoreKit.framework in Frameworks */,
+				F597E9B81E2BD0B1009E38B7 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +62,7 @@
 			children = (
 				F597E99C1E2BCF7B009E38B7 /* Razam */,
 				F597E99B1E2BCF7B009E38B7 /* Products */,
+				F597E9BA1E2BD0B7009E38B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				F597E99D1E2BCF7B009E38B7 /* AppDelegate.swift */,
+				F597E9EF1E2C2890009E38B7 /* Meeting.swift */,
 				F597E99F1E2BCF7B009E38B7 /* ViewController.swift */,
+				F597E9EB1E2C2049009E38B7 /* MeetingsListViewController.swift */,
+				F597E9ED1E2C2490009E38B7 /* SettingsViewController.swift */,
+				F597E9F11E2C5748009E38B7 /* CreateMeetingViewController.swift */,
 				F597E9A11E2BCF7B009E38B7 /* Main.storyboard */,
 				F597E9A71E2BCF7B009E38B7 /* Assets.xcassets */,
 				F597E9A91E2BCF7B009E38B7 /* LaunchScreen.storyboard */,
@@ -65,6 +90,17 @@
 				F597E9A41E2BCF7B009E38B7 /* Razam.xcdatamodeld */,
 			);
 			path = Razam;
+			sourceTree = "<group>";
+		};
+		F597E9BA1E2BD0B7009E38B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F597E9B21E2BD0B1009E38B7 /* Bolts.framework */,
+				F597E9B31E2BD0B1009E38B7 /* FBSDKCoreKit.framework */,
+				F597E9B41E2BD0B1009E38B7 /* FBSDKLoginKit.framework */,
+				F597E9B51E2BD0B1009E38B7 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +135,7 @@
 				TargetAttributes = {
 					F597E9991E2BCF7B009E38B7 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 33K7V3RNV6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,7 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F597E9A01E2BCF7B009E38B7 /* ViewController.swift in Sources */,
+				F597E9F01E2C2890009E38B7 /* Meeting.swift in Sources */,
+				F597E9F21E2C5748009E38B7 /* CreateMeetingViewController.swift in Sources */,
 				F597E9A61E2BCF7B009E38B7 /* Razam.xcdatamodeld in Sources */,
+				F597E9EE1E2C2490009E38B7 /* SettingsViewController.swift in Sources */,
+				F597E9EC1E2C2049009E38B7 /* MeetingsListViewController.swift in Sources */,
 				F597E99E1E2BCF7B009E38B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +305,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 33K7V3RNV6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Razam",
+				);
 				INFOPLIST_FILE = Razam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vitali.potchekin.apilki.Razam;
@@ -276,6 +322,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 33K7V3RNV6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Razam",
+				);
 				INFOPLIST_FILE = Razam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vitali.potchekin.apilki.Razam;
