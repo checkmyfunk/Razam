@@ -120,8 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXu-Oe-fIn">
-                                <frame key="frameInset" minX="135" minY="127" width="104" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXu-Oe-fIn">
                                 <state key="normal" title="Delete meeting"/>
                                 <connections>
                                     <action selector="deleteMeetingTapped:" destination="eu5-gh-Ew1" eventType="touchUpInside" id="gNt-C4-9ZT"/>

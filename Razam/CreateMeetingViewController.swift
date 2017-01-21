@@ -13,20 +13,18 @@ class CreateMeetingViewController: UIViewController {
     @IBOutlet weak var meetingDescriptionText: UITextField!
     @IBOutlet weak var meetingCompanySwitch: UISwitch!
     
-    var previousViewController = MeetingsListViewController()
-    
     @IBAction func createMeetingTapped(_ sender: AnyObject) {
-        //create new meeting from the CreateMeetingViewController
-        let meeting = Meeting()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let meeting = Meeting(context: context)
         meeting.text = meetingDescriptionText.text!
         meeting.company = meetingCompanySwitch.isOn
         //will need to add latitude and longitude after the geolocation services are added
         
+        //saving to core data
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
-        
-        //add new meeting to the array of meetings 
-        previousViewController.meetings.append(meeting)
-        previousViewController.meetingsListView.reloadData()
+        //navigate to previous view controller
         navigationController!.popViewController(animated: true)
     }
     

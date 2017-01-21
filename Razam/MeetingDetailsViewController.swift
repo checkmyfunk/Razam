@@ -10,8 +10,7 @@ import UIKit
 
 class MeetingDetailsViewController: UIViewController {
     
-    var meeting = Meeting ()
-    var previousViewController = MeetingsListViewController()
+    var meeting : Meeting? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +18,15 @@ class MeetingDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    //Delete meeting - will need to call it on timeout as well
     @IBAction func deleteMeetingTapped(_ sender: AnyObject) {
-        previousViewController.meetings.remove(at: previousViewController.selectedMeeting)
+        //should the context be declared outside of the function??
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //should we verify that the meeting in not nil??
+        context.delete(meeting!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
-        previousViewController.meetingsListView.reloadData()
         navigationController!.popViewController(animated: true)
-        
     }
     
     override func didReceiveMemoryWarning() {

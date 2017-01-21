@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F527A61E1E341C280029F2B4 /* Meeting+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527A61C1E341C280029F2B4 /* Meeting+CoreDataClass.swift */; };
+		F527A61F1E341C280029F2B4 /* Meeting+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527A61D1E341C280029F2B4 /* Meeting+CoreDataProperties.swift */; };
 		F597E99E1E2BCF7B009E38B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E99D1E2BCF7B009E38B7 /* AppDelegate.swift */; };
 		F597E9A01E2BCF7B009E38B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E99F1E2BCF7B009E38B7 /* ViewController.swift */; };
 		F597E9A31E2BCF7B009E38B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F597E9A11E2BCF7B009E38B7 /* Main.storyboard */; };
@@ -19,12 +21,13 @@
 		F597E9B91E2BD0B1009E38B7 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F597E9B51E2BD0B1009E38B7 /* FBSDKShareKit.framework */; };
 		F597E9EC1E2C2049009E38B7 /* MeetingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9EB1E2C2049009E38B7 /* MeetingsListViewController.swift */; };
 		F597E9EE1E2C2490009E38B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9ED1E2C2490009E38B7 /* SettingsViewController.swift */; };
-		F597E9F01E2C2890009E38B7 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9EF1E2C2890009E38B7 /* Meeting.swift */; };
 		F597E9F21E2C5748009E38B7 /* CreateMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9F11E2C5748009E38B7 /* CreateMeetingViewController.swift */; };
 		F597E9F41E32FFE5009E38B7 /* MeetingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9F31E32FFE5009E38B7 /* MeetingDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F527A61C1E341C280029F2B4 /* Meeting+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meeting+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F527A61D1E341C280029F2B4 /* Meeting+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meeting+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F597E99A1E2BCF7B009E38B7 /* Razam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Razam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F597E99D1E2BCF7B009E38B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F597E99F1E2BCF7B009E38B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +42,6 @@
 		F597E9B51E2BD0B1009E38B7 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Razam/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		F597E9EB1E2C2049009E38B7 /* MeetingsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingsListViewController.swift; sourceTree = "<group>"; };
 		F597E9ED1E2C2490009E38B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		F597E9EF1E2C2890009E38B7 /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		F597E9F11E2C5748009E38B7 /* CreateMeetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMeetingViewController.swift; sourceTree = "<group>"; };
 		F597E9F31E32FFE5009E38B7 /* MeetingDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,8 @@
 		F597E9911E2BCF7B009E38B7 = {
 			isa = PBXGroup;
 			children = (
+				F527A61C1E341C280029F2B4 /* Meeting+CoreDataClass.swift */,
+				F527A61D1E341C280029F2B4 /* Meeting+CoreDataProperties.swift */,
 				F597E99C1E2BCF7B009E38B7 /* Razam */,
 				F597E99B1E2BCF7B009E38B7 /* Products */,
 				F597E9BA1E2BD0B7009E38B7 /* Frameworks */,
@@ -80,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				F597E99D1E2BCF7B009E38B7 /* AppDelegate.swift */,
-				F597E9EF1E2C2890009E38B7 /* Meeting.swift */,
 				F597E99F1E2BCF7B009E38B7 /* ViewController.swift */,
 				F597E9EB1E2C2049009E38B7 /* MeetingsListViewController.swift */,
 				F597E9F31E32FFE5009E38B7 /* MeetingDetailsViewController.swift */,
@@ -180,9 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F597E9A01E2BCF7B009E38B7 /* ViewController.swift in Sources */,
-				F597E9F01E2C2890009E38B7 /* Meeting.swift in Sources */,
 				F597E9F21E2C5748009E38B7 /* CreateMeetingViewController.swift in Sources */,
+				F527A61F1E341C280029F2B4 /* Meeting+CoreDataProperties.swift in Sources */,
 				F597E9A61E2BCF7B009E38B7 /* Razam.xcdatamodeld in Sources */,
+				F527A61E1E341C280029F2B4 /* Meeting+CoreDataClass.swift in Sources */,
 				F597E9EE1E2C2490009E38B7 /* SettingsViewController.swift in Sources */,
 				F597E9EC1E2C2049009E38B7 /* MeetingsListViewController.swift in Sources */,
 				F597E99E1E2BCF7B009E38B7 /* AppDelegate.swift in Sources */,
@@ -358,6 +362,7 @@
 				F597E9B11E2BCF7B009E38B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
