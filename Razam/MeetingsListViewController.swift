@@ -13,6 +13,7 @@ class MeetingsListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var meetingsListView: UITableView!
     
     var meetings : [Meeting] = []
+    var selectedMeeting = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,14 @@ class MeetingsListViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedMeeting = indexPath.row
+        
+        let meeting = meetings[indexPath.row]
+        performSegue(withIdentifier: "showMeetingDetails", sender: meeting)
+    }
+    
     func makeMeetings() -> [Meeting]{
         let meeting1 = Meeting()
         meeting1.text = "Hello there!"
@@ -54,10 +63,22 @@ class MeetingsListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextViewController = segue.destination as! CreateMeetingViewController
-        nextViewController.previousViewController = self
+        //verify which segue was triggered
+        if segue.identifier == "showAddMeeting" {
+            let nextViewController = segue.destination as! CreateMeetingViewController
+            nextViewController.previousViewController = self
+        }   
+        
+        if segue.identifier == "showMeetingDetails" {
+            let nextViewController = segue.destination as! MeetingDetailsViewController
+            nextViewController.meeting = sender as! Meeting
+            nextViewController.previousViewController = self
+        }
+        
+        
     }
     
+    //adding new meeting
     @IBAction func addMeetingTapped(_ sender: AnyObject) {
         performSegue(withIdentifier: "showAddMeeting", sender: nil)
     }

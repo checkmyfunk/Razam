@@ -21,6 +21,7 @@
 		F597E9EE1E2C2490009E38B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9ED1E2C2490009E38B7 /* SettingsViewController.swift */; };
 		F597E9F01E2C2890009E38B7 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9EF1E2C2890009E38B7 /* Meeting.swift */; };
 		F597E9F21E2C5748009E38B7 /* CreateMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9F11E2C5748009E38B7 /* CreateMeetingViewController.swift */; };
+		F597E9F41E32FFE5009E38B7 /* MeetingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597E9F31E32FFE5009E38B7 /* MeetingDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F597E9ED1E2C2490009E38B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F597E9EF1E2C2890009E38B7 /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		F597E9F11E2C5748009E38B7 /* CreateMeetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMeetingViewController.swift; sourceTree = "<group>"; };
+		F597E9F31E32FFE5009E38B7 /* MeetingDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				F597E9EF1E2C2890009E38B7 /* Meeting.swift */,
 				F597E99F1E2BCF7B009E38B7 /* ViewController.swift */,
 				F597E9EB1E2C2049009E38B7 /* MeetingsListViewController.swift */,
+				F597E9F31E32FFE5009E38B7 /* MeetingDetailsViewController.swift */,
 				F597E9ED1E2C2490009E38B7 /* SettingsViewController.swift */,
 				F597E9F11E2C5748009E38B7 /* CreateMeetingViewController.swift */,
 				F597E9A11E2BCF7B009E38B7 /* Main.storyboard */,
@@ -183,6 +186,7 @@
 				F597E9EE1E2C2490009E38B7 /* SettingsViewController.swift in Sources */,
 				F597E9EC1E2C2049009E38B7 /* MeetingsListViewController.swift in Sources */,
 				F597E99E1E2BCF7B009E38B7 /* AppDelegate.swift in Sources */,
+				F597E9F41E32FFE5009E38B7 /* MeetingDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

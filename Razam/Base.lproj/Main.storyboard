@@ -101,11 +101,50 @@
                     <connections>
                         <outlet property="meetingsListView" destination="LG3-62-zeB" id="JpK-uv-1zi"/>
                         <segue destination="gAH-Up-7Hm" kind="show" identifier="showAddMeeting" id="5jc-OF-GNh"/>
+                        <segue destination="eu5-gh-Ew1" kind="show" identifier="showMeetingDetails" id="iyI-xT-SWI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQB-1y-H4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2640.8000000000002" y="37.331334332833585"/>
+        </scene>
+        <!--Meeting Details View Controller-->
+        <scene sceneID="amH-r0-rB9">
+            <objects>
+                <viewController id="eu5-gh-Ew1" customClass="MeetingDetailsViewController" customModule="Razam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bS5-jh-PON"/>
+                        <viewControllerLayoutGuide type="bottom" id="n4Y-5W-TWR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LrD-Lg-L7r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXu-Oe-fIn">
+                                <frame key="frameInset" minX="135" minY="127" width="104" height="30"/>
+                                <state key="normal" title="Delete meeting"/>
+                                <connections>
+                                    <action selector="deleteMeetingTapped:" destination="eu5-gh-Ew1" eventType="touchUpInside" id="gNt-C4-9ZT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messaging will be here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaO-3Z-cZj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XXu-Oe-fIn" firstAttribute="top" secondItem="eaO-3Z-cZj" secondAttribute="bottom" constant="34" id="TbC-sp-zMt"/>
+                            <constraint firstItem="eaO-3Z-cZj" firstAttribute="centerX" secondItem="LrD-Lg-L7r" secondAttribute="centerX" id="TuR-8Y-rof"/>
+                            <constraint firstItem="XXu-Oe-fIn" firstAttribute="centerX" secondItem="LrD-Lg-L7r" secondAttribute="centerX" id="nmm-Z9-x97"/>
+                            <constraint firstItem="eaO-3Z-cZj" firstAttribute="top" secondItem="bS5-jh-PON" secondAttribute="bottom" constant="20" id="t0b-j2-ILW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N29-Wj-zWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2641" y="743"/>
         </scene>
         <!--Create Meeting View Controller-->
         <scene sceneID="n2h-wY-zRh">
