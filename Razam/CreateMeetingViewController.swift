@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import MapKit
 
-class CreateMeetingViewController: UIViewController {
+class CreateMeetingViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var meetingDescriptionText: UITextField!
     @IBOutlet weak var meetingCompanySwitch: UISwitch!
+    
+    //setting up location manager
+    var locationManager = CLLocationManager()
     
     @IBAction func createMeetingTapped(_ sender: AnyObject) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -19,10 +23,15 @@ class CreateMeetingViewController: UIViewController {
         let meeting = Meeting(context: context)
         meeting.text = meetingDescriptionText.text!
         meeting.company = meetingCompanySwitch.isOn
-        //will need to add latitude and longitude after the geolocation services are added
+        meeting.latitude = locationManager.location!.coordinate.latitude
+        meeting.longitude = locationManager.location!.coordinate.longitude
+        
         
         //saving to core data
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        //stop monitoring location from this view after meeting is created
+        locationManager.stopUpdatingLocation()
         
         //navigate to previous view controller
         navigationController!.popViewController(animated: true)
@@ -31,7 +40,26 @@ class CreateMeetingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //location manager setup
+        locationManager.delegate = self
+        
+        //verify if user already granted permissions to use location
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            print("ready to go")
+        } else {
+            //ask user for location permissions
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+        //setting location accuracy and starting to update location
+        //??? do we need to stop updating location once we are out of this view?
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locationValue:CLLocationCoordinate2D = locationManager.location!.coordinate
+        print("locations = \(locationValue.latitude) \(locationValue.longitude)")
     }
 
     override func didReceiveMemoryWarning() {

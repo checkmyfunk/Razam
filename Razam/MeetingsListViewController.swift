@@ -7,19 +7,47 @@
 //
 
 import UIKit
+import MapKit
 
-class MeetingsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MeetingsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var meetingsListView: UITableView!
     
     var meetings : [Meeting] = []
+    
+    //setting up location manager
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         meetingsListView.dataSource = self
         meetingsListView.delegate = self
+        
+        //location manager setup
+        locationManager.delegate = self
+        
+        //verify if user already granted permissions to use location
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            print("ready to go")
+        } else {
+            //ask user for location permissions
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+        //setting location accuracy and starting to update location
+        //??? do we need to stop updating location once we are out of this view?
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
+        
     }
+    
+    //getting the location value
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locationValue:CLLocationCoordinate2D = locationManager.location!.coordinate
+        print("locations = \(locationValue.latitude) \(locationValue.longitude)")
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         getMeetings()
